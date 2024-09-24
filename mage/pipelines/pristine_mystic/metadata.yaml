@@ -63,17 +63,18 @@ blocks:
   language: python
   name: outliers
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: transformer
   upstream_blocks:
   - remove_columns
   uuid: outliers
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks:
   - export_to_postgres_with_localization
+  - wh_to_gcp
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -86,7 +87,7 @@ blocks:
   upstream_blocks:
   - outliers
   uuid: clean_column_name
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks: []
@@ -102,6 +103,22 @@ blocks:
   upstream_blocks:
   - clean_column_name
   uuid: export_to_postgres_with_localization
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: wh_to_gcp
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - clean_column_name
+  uuid: wh_to_gcp
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}

@@ -14,7 +14,7 @@ def load_from_google_cloud_storage(*args, **kwargs):
     config_profile = 'default'
 
     bucket_name = 'de-project12'
-    object_key = 'car_data.parquet'
+    object_key = 'nyc_yellow_taxi_data.parquet'
 
     df = GoogleCloudStorage.with_config(ConfigFileLoader(config_path, config_profile)).load(
         bucket_name,

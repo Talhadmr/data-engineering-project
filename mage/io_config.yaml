@@ -38,7 +38,7 @@ default:
   DUCKDB_SCHEMA: main
   # Google
 
-  GOOGLE_SERVICE_ACC_KEY_FILEPATH: "magic-zoomcamp/neat-gasket-432112-v2-1aa438bd1d1f.json"
+  GOOGLE_SERVICE_ACC_KEY_FILEPATH: "magic/neat-gasket-432112-v2-1aa438bd1d1f.json"
   GOOGLE_LOCATION: US # Optional
   # MongoDB
   # Specify either the connection string or the (host, password, user, port) to connect to MongoDB.
