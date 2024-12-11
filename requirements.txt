@@ -3,3 +3,11 @@ pandas
 pyarrow
 sqlalchemy
 psycopg2-binary
+scikit-learn
+numpy
+matplotlib
+CHAID
+graphviz
+networkx
+chefboost
+pychaid
